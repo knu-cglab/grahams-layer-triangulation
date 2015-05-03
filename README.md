@@ -1,4 +1,4 @@
-# Point triangulation using Graaham’s scan
+# Point triangulation using Graham’s scan
 C++ implementation of triangulation algorithm.
 
 Contributors:
