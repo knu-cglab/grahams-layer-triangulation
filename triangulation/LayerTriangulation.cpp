@@ -85,6 +85,7 @@ LayerTriangulation::LayerTriangulation(const std::vector<Point2D> &points)
 
     // Perform triangulation
     for (int layer_i = 1; layer_i < layers.size(); ++layer_i) {
+        std::cout << layers[layer_i].size() << std::endl;
         triangulate1(layer_i - 1, layer_i, points);
     }
 
@@ -290,9 +291,6 @@ void LayerTriangulation::triangulate0(int layer0, int layer1, const std::vector<
     do {
         edges.push_back(std::make_pair(idx0[point0], idx1[point1]));
 
-        //std::cout << points[idx0[point0]] << " <-> " << points[idx1[point1]] << std::endl;
-        //std::cout << idx0[point0] << " <-> " << idx1[point1] << std::endl;
-
         if (!is_ccw(points[idx0[point0]], points[idx1[point1]], points[idx1[(point1 + 1) % idx1.size()]])) {
             point1 = (point1 + 1) % idx1.size();
         } else {
@@ -325,6 +323,9 @@ void LayerTriangulation::triangulate1(int layer0, int layer1, const std::vector<
         edges.push_back(std::make_pair(idx0[point0], idx1[point1]));
 
         int next0 = (point0 + 1) % idx0.size(), next1 = (point1 + 1) % idx1.size();
+        if ((point0 == end0 && next1 == end1 && idx1.size() > 1) || (point1 == end1 && next0 == end0))
+            break;
+        
         if (!is_ccw(points[idx0[point0]], points[idx1[point1]], points[idx1[next1]])) {
             // Check if we can build next triangle
             if (!is_ccw(points[idx0[next0]], points[idx1[point1]], points[idx1[next1]])) {
