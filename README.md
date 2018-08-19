@@ -2,7 +2,7 @@
 C++ implementation of triangulation algorithm based on the paper:
 *  V. Tereshchenko,  Y. Tereshchenko and  D. Kotsur, ["Point triangulation using Graham’s scan"](https://ieeexplore.ieee.org/document/7173370/)
 
-![Image of Voronoi diagram](./images/example.gif) 
+![Image of Triangulation](./example.gif) 
 
 ## Contributors:
 * Vasyl Tereshchenko
