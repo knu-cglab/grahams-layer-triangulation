@@ -10,4 +10,4 @@ C++ implementation of triangulation algorithm based on the paper:
 * Dmytro Kotsur
 
 ## License
-This project is licensed under the MIT License - see the [license.md](license.md) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
