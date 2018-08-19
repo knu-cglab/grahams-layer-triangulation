@@ -1,7 +1,7 @@
 # Point triangulation using Graham’s scan
 C++ implementation of triangulation algorithm based on the paper:
 *  V. Tereshchenko,  Y. Tereshchenko and  D. Kotsur, ["Point triangulation using Graham’s scan"](https://ieeexplore.ieee.org/document/7173370/)
-
+<br/><br/><br/>
 <p align="center"> <img src="./example.gif"> </p>
 
 ## Contributors:
